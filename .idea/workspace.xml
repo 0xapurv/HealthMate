@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3b4ac9f-51c6-4f5c-a2fb-bd259aa1862d" name="Default Changelist" comment="second commit">
+      <change afterPath="$PROJECT_DIR$/lib/elements.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/FAB2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/FAB2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/modules/login/login_email.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/login/login_email.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/careplan/addmeasure.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/careplan/addmeasure.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/careplan/addnut.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/careplan/addnut.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modules/careplan/homecare.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/careplan/homecare.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/modules/signup/signup.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/modules/signup/signup.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +22,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="RZ8M50VXVCW" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>

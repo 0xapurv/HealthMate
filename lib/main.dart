@@ -1,6 +1,7 @@
 
 import 'package:cliniccare/home.dart';
 import 'package:cliniccare/modules/careplan/addmeasure.dart';
+import 'package:cliniccare/modules/careplan/homecare.dart';
 import 'package:cliniccare/modules/reminder/reminders.dart';
 import 'package:cliniccare/splash.dart';
 import 'package:flutter/material.dart';

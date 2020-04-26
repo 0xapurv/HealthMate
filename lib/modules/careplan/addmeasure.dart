@@ -51,7 +51,7 @@ class IconRow extends StatelessWidget {
       child: new Stack(
         children: <Widget>[
           vitalCard,
-          vitalThumbnail,
+
         ],
       ),
 
@@ -59,16 +59,6 @@ class IconRow extends StatelessWidget {
   }
 }
 
-
-final vitalThumbnail =new Container(
-  margin: new EdgeInsets.symmetric(vertical: 16.0),
-  alignment: FractionalOffset.centerLeft,
-  child: new Image(
-    image: new AssetImage("images/heart.jpg"),
-    height: 92.0,
-    width: 92.0,
-  ),
-);
 
 final vitalCard = new Container(
   height: 124.0,

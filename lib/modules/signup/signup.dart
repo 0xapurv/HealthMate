@@ -97,184 +97,186 @@ class SignUpPageState extends State<SignUpPage> with SingleTickerProviderStateMi
 
     return new Scaffold(
         backgroundColor: Colors.black,
-        body:new Stack(
-          children: <Widget>[
-            new Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  new Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
+        body:SingleChildScrollView(
+          child: new Stack(
+            children: <Widget>[
+              new Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    new Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
 
-                      new Container(
-                        padding: const EdgeInsets.only(top:0.0),
-                        child: new Image.asset(
-                          'images/logo.JPEG',
-                          height: 150.0,
-                          width: 150.0,
-                          //fit: BoxFit.cover,
-                        ),
-                      )
+                        new Container(
+                          padding: const EdgeInsets.only(top:0.0),
+                          child: new Image.asset(
+                            'images/logo.JPEG',
+                            height: 150.0,
+                            width: 150.0,
+                            //fit: BoxFit.cover,
+                          ),
+                        )
 
-                    ],
-                  ),
-                  new Form(
-                    child: new Theme(
-                      data:new ThemeData(
-                          brightness: Brightness.dark,primarySwatch: Colors.teal,
-                          inputDecorationTheme:new InputDecorationTheme(
-                              labelStyle:new TextStyle(
-                                color: Colors.black,
-                                fontSize: 20.0,
-                              )) ),
-                      child: new Container(
-                        padding: const EdgeInsets.all(20.0),
-                        child: new Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            new TextFormField(
-                              focusNode: _focusNode1,
-                              onTap: _requestFocus1,
-                              decoration: new InputDecoration(
-                                  labelText: "Email Address",
-                                  hintText: "Enter your Email Address(you@email.com)",
-                                  border: new OutlineInputBorder(
-                                    borderRadius: new BorderRadius.circular(15.0),
-                                    borderSide: BorderSide(
-                                      color: Colors.blue,
-                                    ),
-                                  ),
-                                  enabledBorder: new OutlineInputBorder(
-                                    borderRadius: new BorderRadius.circular(15.0),
-                                    borderSide: BorderSide(
-                                      color: Colors.white,
-                                    ),
-
-                                  ),
-                                  labelStyle: TextStyle(
-                                      color:_focusNode1.hasFocus ? Colors.blue : Colors.white)
-                              ),
-                              keyboardType:TextInputType.emailAddress ,
-                            ),
-                            new Padding(padding: EdgeInsets.only(top:20.0)),
-                            new TextFormField(
-                              focusNode: _focusNode2,
-                              onTap: _requestFocus2,
-                              decoration: new InputDecoration(
-                                  labelText: "Password",
-                                  hintText: "Your Password(atleast 8 characters)",
-                                  border: new OutlineInputBorder(
-                                    borderRadius: new BorderRadius.circular(15.0),
-                                    borderSide: BorderSide(
-                                      color: Colors.blue,
-                                    ),
-                                  ),
-                                  enabledBorder: new OutlineInputBorder(
-                                    borderRadius: new BorderRadius.circular(15.0),
-                                    borderSide: BorderSide(
-                                      color: Colors.white,
-                                    ),
-
-                                  ),
-                                  labelStyle: TextStyle(
-                                      color:_focusNode2.hasFocus ? Colors.blue : Colors.white)
-                              ),
-                              keyboardType:TextInputType.visiblePassword ,
-                              obscureText: true,
-                            ),
-                            //new Padding(
-                             //   padding: const EdgeInsets.only(top: 40.0) ),
-                            new Padding(padding: EdgeInsets.only(top:20.0)),
-                            new TextFormField(
-                              focusNode: _focusNode3,
-                              onTap: _requestFocus3,
-                              decoration: new InputDecoration(
-                                  labelText: "Age",
-                                  hintText: "Enter your Age(e.g. 40)",
-                                  border: new OutlineInputBorder(
-                                    borderRadius: new BorderRadius.circular(15.0),
-                                    borderSide: BorderSide(
-                                      color: Colors.blue,
-                                    ),
-                                  ),
-                                  enabledBorder: new OutlineInputBorder(
-                                    borderRadius: new BorderRadius.circular(15.0),
-                                    borderSide: BorderSide(
-                                      color: Colors.white,
-                                    ),
-
-                                  ),
-                                  labelStyle: TextStyle(
-                                      color:_focusNode3.hasFocus ? Colors.blue : Colors.white)
-                              ),
-                              keyboardType:TextInputType.number,
-
-                            ),
-                            new Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget>[
-                                CheckboxGroup(
-                                  orientation: GroupedButtonsOrientation.HORIZONTAL,
-                                  padding: EdgeInsets.only(left: 100.0),
-                                  labelStyle: TextStyle(
-                                    color: Colors.white,
-                                  ),
-                                  labels:<String>[
-                                    "Male",
-                                    "Female",
-                                    "Other",
-                                  ],
-                                  checked: _checked,
-                                 onChange: (bool _isChecked, String label, int index)=>
-                                  print("isChecked:$_isChecked label:$label index: $index"),
-                                 onSelected:(List selected) =>setState((){
-                                    if (selected.length>1){
-                                      selected.removeAt(0);
-                                    }
-                                    _checked=selected;
-                                  }),
-                                ),
-                              ],
-                            ),
-                            new Padding(padding: const EdgeInsets.only(top: 10.0)),
-                            new CheckboxListTile(
-                              title: Text("I agree to the terms of service"),
-                              value: _Checked,
-                              onChanged: _isEnabled
-                              ? (val) {
-                                setState(() {
-                                  _Checked= val;
-                                });
-                              }:null,
-                            ),
-
-                            new Padding(
-                                padding: const EdgeInsets.only(top: 10.0) ),
-                            new MaterialButton(
-                              height: 50.0,
-                              minWidth: 100.0,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: new BorderRadius.circular(15.0),
-                                side: BorderSide(color: Colors.white10),
-                              ),
-                              color:Colors.teal,
-                              textColor: Colors.white,
-                              child: new Text("COMPLETE SIGN UP ->"),
-                              onPressed: (){
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (context) => HomePage()));
-                              },
-                              splashColor: Colors.white70,
-                            ),
-
-                      ]),
+                      ],
                     ),
-                  )
+                    new Form(
+                      child: new Theme(
+                        data:new ThemeData(
+                            brightness: Brightness.dark,primarySwatch: Colors.teal,
+                            inputDecorationTheme:new InputDecorationTheme(
+                                labelStyle:new TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20.0,
+                                )) ),
+                        child: new Container(
+                          padding: const EdgeInsets.all(20.0),
+                          child: new Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: <Widget>[
+                              new TextFormField(
+                                focusNode: _focusNode1,
+                                onTap: _requestFocus1,
+                                decoration: new InputDecoration(
+                                    labelText: "Email Address",
+                                    hintText: "Enter your Email Address(you@email.com)",
+                                    border: new OutlineInputBorder(
+                                      borderRadius: new BorderRadius.circular(15.0),
+                                      borderSide: BorderSide(
+                                        color: Colors.blue,
+                                      ),
+                                    ),
+                                    enabledBorder: new OutlineInputBorder(
+                                      borderRadius: new BorderRadius.circular(15.0),
+                                      borderSide: BorderSide(
+                                        color: Colors.white,
+                                      ),
 
-            )
-          ],
-        )]));
+                                    ),
+                                    labelStyle: TextStyle(
+                                        color:_focusNode1.hasFocus ? Colors.blue : Colors.white)
+                                ),
+                                keyboardType:TextInputType.emailAddress ,
+                              ),
+                              new Padding(padding: EdgeInsets.only(top:20.0)),
+                              new TextFormField(
+                                focusNode: _focusNode2,
+                                onTap: _requestFocus2,
+                                decoration: new InputDecoration(
+                                    labelText: "Password",
+                                    hintText: "Your Password(atleast 8 characters)",
+                                    border: new OutlineInputBorder(
+                                      borderRadius: new BorderRadius.circular(15.0),
+                                      borderSide: BorderSide(
+                                        color: Colors.blue,
+                                      ),
+                                    ),
+                                    enabledBorder: new OutlineInputBorder(
+                                      borderRadius: new BorderRadius.circular(15.0),
+                                      borderSide: BorderSide(
+                                        color: Colors.white,
+                                      ),
+
+                                    ),
+                                    labelStyle: TextStyle(
+                                        color:_focusNode2.hasFocus ? Colors.blue : Colors.white)
+                                ),
+                                keyboardType:TextInputType.visiblePassword ,
+                                obscureText: true,
+                              ),
+                              //new Padding(
+                               //   padding: const EdgeInsets.only(top: 40.0) ),
+                              new Padding(padding: EdgeInsets.only(top:20.0)),
+                              new TextFormField(
+                                focusNode: _focusNode3,
+                                onTap: _requestFocus3,
+                                decoration: new InputDecoration(
+                                    labelText: "Age",
+                                    hintText: "Enter your Age(e.g. 40)",
+                                    border: new OutlineInputBorder(
+                                      borderRadius: new BorderRadius.circular(15.0),
+                                      borderSide: BorderSide(
+                                        color: Colors.blue,
+                                      ),
+                                    ),
+                                    enabledBorder: new OutlineInputBorder(
+                                      borderRadius: new BorderRadius.circular(15.0),
+                                      borderSide: BorderSide(
+                                        color: Colors.white,
+                                      ),
+
+                                    ),
+                                    labelStyle: TextStyle(
+                                        color:_focusNode3.hasFocus ? Colors.blue : Colors.white)
+                                ),
+                                keyboardType:TextInputType.number,
+
+                              ),
+                              new Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  CheckboxGroup(
+                                    orientation: GroupedButtonsOrientation.HORIZONTAL,
+                                    padding: EdgeInsets.only(left: 100.0),
+                                    labelStyle: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                    labels:<String>[
+                                      "Male",
+                                      "Female",
+                                      "Other",
+                                    ],
+                                    checked: _checked,
+                                   onChange: (bool _isChecked, String label, int index)=>
+                                    print("isChecked:$_isChecked label:$label index: $index"),
+                                   onSelected:(List selected) =>setState((){
+                                      if (selected.length>1){
+                                        selected.removeAt(0);
+                                      }
+                                      _checked=selected;
+                                    }),
+                                  ),
+                                ],
+                              ),
+                              new Padding(padding: const EdgeInsets.only(top: 10.0)),
+                              new CheckboxListTile(
+                                title: Text("I agree to the terms of service"),
+                                value: _Checked,
+                                onChanged: _isEnabled
+                                ? (val) {
+                                  setState(() {
+                                    _Checked= val;
+                                  });
+                                }:null,
+                              ),
+
+                              new Padding(
+                                  padding: const EdgeInsets.only(top: 10.0) ),
+                              new MaterialButton(
+                                height: 50.0,
+                                minWidth: 100.0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: new BorderRadius.circular(15.0),
+                                  side: BorderSide(color: Colors.white10),
+                                ),
+                                color:Colors.teal,
+                                textColor: Colors.white,
+                                child: new Text("COMPLETE SIGN UP ->"),
+                                onPressed: (){
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => HomePage()));
+                                },
+                                splashColor: Colors.white70,
+                              ),
+
+                        ]),
+                      ),
+                    )
+
+              )
+            ],
+          )]),
+        ));
 
   }
 }

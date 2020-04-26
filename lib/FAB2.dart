@@ -28,12 +28,10 @@ class _FAB2State extends State<FAB2> with TickerProviderStateMixin {
                   color: Colors.white,
                   onPressed: (){
                     setState(() {
-                      Navigator.pop(
+                      Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => HomePage()));
                     });
-
-
                   },
                   child: Icon(Icons.close,color: Colors.redAccent),
                 )
