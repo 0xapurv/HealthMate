@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:grouped_buttons/grouped_buttons.dart';
 import 'package:flutter/material.dart';
 
+import '../../home.dart';
+
 class SignUpPage extends StatefulWidget {
   @override
   SignUpPageState createState() => SignUpPageState();
@@ -258,7 +260,11 @@ class SignUpPageState extends State<SignUpPage> with SingleTickerProviderStateMi
                               color:Colors.teal,
                               textColor: Colors.white,
                               child: new Text("COMPLETE SIGN UP ->"),
-                              onPressed: _onPressed,
+                              onPressed: (){
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => HomePage()));
+                              },
                               splashColor: Colors.white70,
                             ),
 

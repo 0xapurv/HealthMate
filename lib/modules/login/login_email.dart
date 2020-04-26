@@ -7,6 +7,8 @@ import 'package:cliniccare/modules/login/login_presenter.dart';
 import 'package:cliniccare/utils/database.dart';
 import 'package:flutter/material.dart';
 
+import '../../home.dart';
+
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -199,7 +201,11 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
                           color:Colors.teal,
                           textColor: Colors.white,
                           child: new Text("Login"),
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => HomePage()));
+                          },
                           splashColor: Colors.white70,
                         )
                       ],
